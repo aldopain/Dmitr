@@ -1,0 +1,5 @@
+C:\Jaann\Dmitr\labs\Parser\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache
+C:\Jaann\Dmitr\labs\Parser\Parser\bin\Debug\Parser.exe
+C:\Jaann\Dmitr\labs\Parser\Parser\bin\Debug\Parser.pdb
+C:\Jaann\Dmitr\labs\Parser\Parser\obj\x86\Debug\Parser.exe
+C:\Jaann\Dmitr\labs\Parser\Parser\obj\x86\Debug\Parser.pdb
