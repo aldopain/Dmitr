@@ -13,7 +13,7 @@ namespace lab3
 				Y = y;
 			}
 		}
-		//y=100(A2-A1^2)^2+(1-A1)^2
+		//y=100(x2-x1^2)^2+(1-x1)^2
 		Point x0 = new Point(-1, 0), p1 = new Point(5, 1);
 		public double ah = 0.0001, A1 = 0, A2, T1 = (-1 + Math.Sqrt(5))/2, T2 = 1 - (-1 + Math.Sqrt(5))/2, Eps = 0.00001;
 		int k = 1, M1 = 20, M2 = 30;

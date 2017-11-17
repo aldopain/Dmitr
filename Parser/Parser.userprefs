@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Parser\Program.cs">
     <Files>
-      <File FileName="Parser\Program.cs" Line="117" Column="63" />
+      <File FileName="Parser\Program.cs" Line="203" Column="42" />
       <File FileName="Parser\MathExpression.cs" Line="21" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>

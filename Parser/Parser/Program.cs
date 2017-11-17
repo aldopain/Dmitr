@@ -114,8 +114,34 @@ namespace Parser
 			}
 			Parser p = new Parser (buf, args, argCount);
 			me.AddRange (p.getMathExpressions());
-			ex = ex.Replace(ex[pos] + buf + ex[i], p.getExpression ());
+			ex = ex.Replace(ex[pos] + buf + ')', p.getExpression ());
 			argCount = p.getArgCount ();
+		}
+
+		bool DetectNum(int pos, out double num, out int newPos){
+			newPos = pos;
+			num = 0;
+			if (pos != 0 && ex [pos - 1] == 'x')
+				return false;
+			String buf = "";
+			for (int i = pos; i < ex [i]; i++) {
+				if ((ex [i] >= 48 && ex [i] <= 59) || ex[i] == '.')
+					buf += ex [i];
+				else{
+					newPos = i;
+					break;
+				}
+			}
+			double retVal;
+			if (Double.TryParse (buf, out num))
+				return true;
+			return false;
+		}
+
+		void ParseNums(){
+			for (int i = 0; i < ex.Length; i++) {
+				//if()
+			}
 		}
 
 		void Parse(){
@@ -178,9 +204,9 @@ namespace Parser
 
 		public static void Main (string[] args)
 		{
-			Parser p = new Parser ("x1+x2-x3*(x1*(x5-x4))/x6/x1-x2");
-			Console.WriteLine("y = " + p.y (new double[]{12,5,76,4,0.7,8}));
-			Console.WriteLine("y = " + p.y (new double[]{1,5,76,4,0.7,8}));
+			Parser p = new Parser ("(((((x1*x2)))))");
+			Console.WriteLine("y = " + p.y (new double[]{12,5}));
+			Console.WriteLine("y = " + p.y (new double[]{1,5}));
 		}
 	}
 }
